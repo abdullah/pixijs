@@ -262,6 +262,7 @@ export class Buffer extends EventEmitter<{
         const oldData = this._data;
 
         this._data = value;
+        this._dataInt32 = null;
 
         // Event handling
         if (!oldData || oldData.length !== value.length)
